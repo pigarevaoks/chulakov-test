@@ -3,7 +3,13 @@
 // Adapted from http://github.com/necolas/normalize.css
 // --------------------------------------------------
 
-
+* {
+	box-sizing:border-box;
+}
+*:before,
+*:after {
+	box-sizing:border-box;
+}
 // Display in IE6-9 and FF3
 // -------------------------
 
@@ -47,7 +53,7 @@ html {
       -ms-text-size-adjust: 100%;
 }
 body{
-    margin: 0; 
+    margin: 0;
 }
 
 // Hover & Active

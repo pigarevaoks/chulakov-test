@@ -1,0 +1,41 @@
+.navigation{
+	width: 318px;
+	float: left;
+	margin-right: 2px;
+	&__logo{
+		height: 162px;
+		background: @cGray;
+		padding: 64px 29px;
+		&-img{
+			width: 176px;
+			height: 36px;
+			display: block;
+			background: url('@{pathToImg}logo.png') no-repeat center;
+			background-size: contain;
+		}
+	}
+	&__item{
+		display: block;
+		background: @cGray;
+		border-top: 1px solid #2a2d37;
+		color: #FFF;
+		font-size: 18px;
+		line-height: 1;
+		font-family: @fOpenSans;
+		text-decoration: none;
+		padding: 28px 29px;
+		transition: background @animTime, color @animTime;
+		&._active{
+			background: @cActiveGrey;
+			color: #808592;
+		}
+		&._dark{
+			background: @cDarkGrey;
+			color: #808592;
+		}
+		&:hover, &:focus{
+			background: #2a2d37;
+			color: #808592;
+		}
+	}
+}
