@@ -173,8 +173,18 @@ textarea {
   clear: both;
 }
 /* Paths */
+@font-face {
+  font-family: "OpenSansBold";
+  src: url("../fonts/OpenSansBold.woff") format("woff");
+  src: url("../fonts/OpenSansBold.woff2") format("woff2"), url("../fonts/OpenSansBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 body {
-  background: red;
+  font-family: 'Arial', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 .pull-right {
   float: right;
