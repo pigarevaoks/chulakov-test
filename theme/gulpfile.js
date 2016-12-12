@@ -58,7 +58,7 @@ gulp.task('jsMain:min', function() {
 
 gulp.task('jsLibs:concat', function() {
 	return gulp.src([
-		// options.sourcePathScripts + '/radiocheck.js'
+		options.sourcePathScripts + '/chosen/chosen.jquery.js'
 	])
 		.pipe(concat('libs.js'))
 		.pipe(gulp.dest(options.sourcePathScripts))

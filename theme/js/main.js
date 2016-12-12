@@ -2,8 +2,9 @@
 
 $(function () {
 	mobMenu();
+	chosen();
 });
-
+// mobile menu
 var mobMenu = function() {
 	var $menuBtn = $('[data-mob-menu-btn]'),
 			$menu = $('[data-mob-menu]'),
@@ -36,3 +37,10 @@ var mobMenu = function() {
 		$('body, html').removeClass('overflow-hidden');
 	}
 }
+//custom select
+var chosen = function () {
+	$('[data-chosen]').chosen({
+		disable_search_threshold: 1000,
+		width: "100%"
+	})
+};

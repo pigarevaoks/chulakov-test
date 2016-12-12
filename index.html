@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="theme/js/chosen/chosen.css">
 	<link rel="stylesheet" href="theme/css/styles.css">
 	<title>Document</title>
 </head>
@@ -73,7 +74,8 @@
 							</div>
 							<div class="payment__card-date">
 								<label class="payment__form-label">Срок действия</label>
-								<select class="payment__form-select">
+								<div class="payment__form-select">
+									<select data-chosen>
 									<option value="1">01</option>
 									<option value="2">02</option>
 									<option value="3">03</option>
@@ -87,13 +89,16 @@
 									<option value="11">11</option>
 									<option value="12">12</option>
 								</select>
-								<select class="payment__form-select">
+								</div>
+								<div class="payment__form-select">
+									<select data-chosen>
 									<option value="2016">2016</option>
 									<option value="2017">2017</option>
 									<option value="2018">2018</option>
 									<option value="2019">2019</option>
 									<option value="2020">2020</option>
 								</select>
+								</div>
 							</div>
 							<div class="payment__card-name">
 								<input type="text" class="payment__form-input _all-width" placeholder="Держатель карты">
@@ -122,6 +127,7 @@
 	</div>
 	<footer>
 		<script src="theme/js/jquery-2.1.1.min.js"></script>
+		<script src="theme/js/libs.js"></script>
 		<script src="theme/js/main.js"></script>
 	</footer>
 </body>

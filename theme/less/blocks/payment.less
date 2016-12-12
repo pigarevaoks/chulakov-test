@@ -78,8 +78,11 @@
 		&-input{
 			height: 42px;
 			background-color: #ffffff;
+			font-size: 16px;
+			text-transform: uppercase;
 			border: solid 1px #e4e9ee;
-			padding: 0 15px;
+			appearance: none;
+			padding: 0 10px;
 			&._small{
 				width: 65px;
 				margin-right: 6px;
@@ -104,12 +107,66 @@
 			}
 		}
 		&-select{
-			height: 42px;
-			background-color: #ffffff;
-			border: solid 1px #e4e9ee;
-			border-radius: 0;
-			font-size: 16px;
-			color: #373c43;
+			display: inline-block;
+			margin-right: 6px;
+			&:last-child{
+				margin-right: 0;
+			}
+			select{
+				min-width: 70px;
+				height: 42px;
+				background-color: #ffffff;
+				line-height: 42px;
+				border: solid 1px #e4e9ee;
+				border-radius: 0;
+				padding: 0 0 0 10px;
+				background-image: url('@{pathToImg}icons/arrow-down.png');
+				background-position: right 8px center;
+				background-repeat: no-repeat;
+				appearance: none;
+			}
+			.chosen-container-single{
+				.chosen-single{
+					min-width: 70px;
+					height: 42px;
+					background-color: #ffffff;
+					line-height: 42px;
+					box-shadow: none;
+					border: solid 1px #e4e9ee;
+					border-radius: 0;
+					padding: 0 0 0 15px;
+					span{
+						font-size: 16px;
+						color: #373c43;
+						margin-right: 35px;
+					}
+					div{
+						width: 35px;
+						b{
+							background: url('@{pathToImg}icons/arrow-down.png') no-repeat center;
+							background-size: 16px 8px;
+						}
+					}
+				}
+				.chosen-drop{
+					border: solid 1px #e4e9ee;
+					border-radius: 0;
+					box-shadow: none;
+					.chosen-results{
+						max-height: 120px;
+						margin: 0;
+						padding: 0;
+						li{
+							font-size: 16px;
+							line-height: 1.2;
+							padding: 5px 5px 5px 15px;
+							&.highlighted{
+								background: @cBlue;
+							}
+						}
+					}
+				}
+			}
 		}
 		&-question{
 			width: 23px;
@@ -150,7 +207,8 @@
 		}
 		&__form{
 			&-input{
-				padding: 0 10px;
+				padding: 0 7px;
+				font-size: 14px;
 				&._small{
 				  width: 54px;
 				}
