@@ -11,7 +11,6 @@
 	<div class="grid">
 		<header class="header">
 			<div class="header__inner">
-				<a class="header__logo" href="/"></a>
 				<button type="button" class="header__menu-btn" data-mob-menu-btn>
 					<div class="header__menu-btn-ico">
 						<div class="header__menu-btn-ico-bar _1"></div>
@@ -21,13 +20,17 @@
 						<div class="header__menu-btn-ico-bar _5"></div>
 					</div>
 				</button>
+				<a class="header__logo" href="/"></a>
 			</div>
 			<div class="mob-menu" data-mob-menu>
-				<a class="mob-menu__item" data-mob-menu-link href="#">Первая ссылка</a>
-				<a class="mob-menu__item _active" data-mob-menu-link href="#">Вторая ссылка (активная)</a>
-				<a class="mob-menu__item" data-mob-menu-link href="#">Третья ссылка</a>
-				<a class="mob-menu__item" data-mob-menu-link href="#">Личный кабинет</a>
-				<a class="mob-menu__item" data-mob-menu-link href="#">Выйти</a>
+				<div class="mob-menu__inner">
+					<a class="mob-menu__item" href="#">Первая ссылка</a>
+					<a class="mob-menu__item _active" href="#">Вторая ссылка (активная)</a>
+					<a class="mob-menu__item" href="#">Третья ссылка</a>
+					<a class="mob-menu__item" href="#">Личный кабинет</a>
+					<a class="mob-menu__item" href="#">Выйти</a>
+				</div>
+				<div class="mob-menu__back" data-mob-menu-close></div>
 			</div>
 		</header>
 		<nav class="navigation">

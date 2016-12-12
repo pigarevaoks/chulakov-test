@@ -20,12 +20,13 @@
 			float: right;
 			position: relative;
 		  background-color: transparent;
-			transition:background-color @animTime, transform 1s;
+			transition: background-color @animTime, transform 1s;
 			transform: translate(0,0);
 			border: none;
 			padding: 0;
 			&._active{
 				transform: translate(-270px,0);
+				background-color: #101114;
 				.header__menu-btn-ico-bar{
 					&._1{
 						&:after{
@@ -78,7 +79,7 @@
 						display: block;
 						content: '';
 						background-color: white;
-						transition:background-color @animTime;
+						transition: background-color @animTime;
 					}
 					&._1{
 						margin-top: 0;
@@ -127,18 +128,13 @@
 		display: block;
 	}
 }
-@media (max-width:768px){
-	.header{
-
-	}
-}
 @media (max-width:480px){
 	.header{
     margin: 20px;
 		&__menu{
 			&-btn{
 				&._active{
-					transform: translate(-260px, 0);
+					transform: translate(-250px, 0);
 				}
 			}
 		}

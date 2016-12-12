@@ -1,25 +1,38 @@
+'use strict'
+
 $(function () {
 	mobMenu();
 });
 
-mobMenu = function () {
-	var $items = $('[data-mob-menu-link]'),
-			$mobMenu = $('[data-mob-menu]'),
-			$mobMenuBtn = $('[data-mob-menu-btn]');
+var mobMenu = function() {
+	var $menuBtn = $('[data-mob-menu-btn]'),
+			$menu = $('[data-mob-menu]'),
+			$close = $menu.find('[data-mob-menu-close]'),
+			mobMenuOpen = false;
 
-	$mobMenuBtn.on('click', function () {
-		$(this).toggleClass('_active');
-		$mobMenu.toggleClass('_show');
-	});
-
-	$items.on('click', function () {
-		if($(this).hasClass('_active')){
-			return false;
-		}else{
-			$items.removeClass('_active');
-			$(this).addClass('_active');
-			$mobMenu.removeClass('_show');
-			$mobMenuBtn.removeClass('_active');
+	$menuBtn.on('click',function(){
+		if ($(this).hasClass('_active')) {
+			_hide();
+		} else {
+			_show();
 		}
 	});
-};
+
+	$close.on('click', function () {
+		_hide();
+	});
+
+	function _show(){
+		mobMenuOpen = true;
+		$menu.addClass('_show');
+		$menuBtn.addClass('_active');
+		$('body, html').addClass('overflow-hidden');
+	}
+
+	function _hide(){
+		mobMenuOpen = false;
+		$menu.removeClass('_show');
+		$menuBtn.removeClass('_active');
+		$('body, html').removeClass('overflow-hidden');
+	}
+}
