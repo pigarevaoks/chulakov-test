@@ -125,3 +125,52 @@
 		}
 	}
 }
+
+@media (max-width:660px){
+	.payment{
+		&__card{
+			&._back{
+			  margin: 15px 0;
+			}
+		}
+	}
+}
+
+@media (max-width:480px){
+	.payment{
+		&__info{
+  	  margin-bottom: 20px;
+		}
+		&__card{
+			width: 100%;
+		}
+		&__form{
+			&-input{
+				padding: 0 10px;
+				&._small{
+				  width: 54px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width:320px){
+	.payment{
+		&__info{
+			&-title{
+				margin-bottom: 15px;
+			}
+  	  &-row{
+				&-title{
+					width: 100%;
+					display: block;
+				}
+				&-val{
+					width: 100%;
+					display: block;
+				}
+			}
+		}
+	}
+}

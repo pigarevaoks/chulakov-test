@@ -215,6 +215,11 @@ body {
 .b-btn:focus {
   opacity: .7;
 }
+@media (max-width: 480px) {
+  .b-btn {
+    width: 100%;
+  }
+}
 .navigation {
   width: 318px;
   float: left;
@@ -304,6 +309,33 @@ body {
   .content {
     float: none;
     width: auto;
+  }
+  .content__header-description {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .content__header {
+    min-height: auto;
+    padding: 35px 20px 25px;
+  }
+  .content__header-description {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+  .content__block {
+    padding: 25px 20px 30px;
+  }
+  .content__footer {
+    padding: 10px 20px 15px;
+  }
+}
+@media (max-width: 320px) {
+  .content__header {
+    padding: 25px 20px 20px;
+  }
+  .content__block {
+    padding: 15px 20px 20px;
   }
 }
 .payment__info {
@@ -426,6 +458,38 @@ body {
   right: 9px;
   padding: 0;
 }
+@media (max-width: 660px) {
+  .payment__card._back {
+    margin: 15px 0;
+  }
+}
+@media (max-width: 480px) {
+  .payment__info {
+    margin-bottom: 20px;
+  }
+  .payment__card {
+    width: 100%;
+  }
+  .payment__form-input {
+    padding: 0 10px;
+  }
+  .payment__form-input._small {
+    width: 54px;
+  }
+}
+@media (max-width: 320px) {
+  .payment__info-title {
+    margin-bottom: 15px;
+  }
+  .payment__info-row-title {
+    width: 100%;
+    display: block;
+  }
+  .payment__info-row-val {
+    width: 100%;
+    display: block;
+  }
+}
 .grid {
   width: 960px;
   position: relative;
@@ -462,6 +526,25 @@ p {
   .grid {
     width: auto;
     padding: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .grid {
+    padding: 0;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 320px) {
+  h1 {
+    font-size: 25px;
+  }
+  h2 {
+    font-size: 18px;
   }
 }
 .mob-menu {
@@ -642,6 +725,16 @@ p {
 @media (max-width: 1024px) {
   .header {
     display: block;
+  }
+}
+@media (max-width: 480px) {
+  .header {
+    margin: 20px;
+  }
+  .header__menu-btn._active {
+    -webkit-transform: translate(-260px, 0);
+        -ms-transform: translate(-260px, 0);
+            transform: translate(-260px, 0);
   }
 }
 .pull-right {
