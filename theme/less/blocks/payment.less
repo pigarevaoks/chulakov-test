@@ -83,12 +83,16 @@
 			border: solid 1px #e4e9ee;
 			appearance: none;
 			padding: 0 10px;
+			transition: border-color @animTime;
 			&._small{
 				width: 65px;
 				margin-right: 6px;
 				&:last-child{
 					margin-right: 0;
 				}
+			}
+			&.error{
+				border-color: #d9534f;
 			}
 			&._all-width{
 				width: 100%;

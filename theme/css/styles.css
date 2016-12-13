@@ -420,6 +420,7 @@ body {
      -moz-appearance: none;
           appearance: none;
   padding: 0 10px;
+  transition: border-color 0.5s;
 }
 .payment__form-input._small {
   width: 65px;
@@ -427,6 +428,9 @@ body {
 }
 .payment__form-input._small:last-child {
   margin-right: 0;
+}
+.payment__form-input.error {
+  border-color: #d9534f;
 }
 .payment__form-input._all-width {
   width: 100%;

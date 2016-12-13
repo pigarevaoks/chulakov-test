@@ -58,7 +58,9 @@ gulp.task('jsMain:min', function() {
 
 gulp.task('jsLibs:concat', function() {
 	return gulp.src([
-		options.sourcePathScripts + '/chosen/chosen.jquery.js'
+		options.sourcePathScripts + '/chosen/chosen.jquery.js',
+		options.sourcePathScripts + '/jquery.validate.min.js',
+		options.sourcePathScripts + '/jquery.inputmask.bundle.min.js'
 	])
 		.pipe(concat('libs.js'))
 		.pipe(gulp.dest(options.sourcePathScripts))

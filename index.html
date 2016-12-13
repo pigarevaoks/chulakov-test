@@ -63,19 +63,19 @@
 						</div>
 					</div>
 					<h2>Данные банковской карты</h2>
-					<form class="payment__form">
+					<form class="payment__form" data-card-form>
 						<div class="payment__card _front">
 							<div class="payment__card-number">
-								<label class="payment__form-label">Номер карты</label>
-								<input type="text" class="payment__form-input _small">
-								<input type="text" class="payment__form-input _small">
-								<input type="text" class="payment__form-input _small">
-								<input type="text" class="payment__form-input _small">
+								<label class="payment__form-label" for="card">Номер карты</label>
+								<input type="text" name="card[number_1]" id="card" class="payment__form-input _small">
+								<input type="text" name="card[number_2]" class="payment__form-input _small">
+								<input type="text" name="card[number_3]" class="payment__form-input _small">
+								<input type="text" name="card[number_4]" class="payment__form-input _small">
 							</div>
 							<div class="payment__card-date">
 								<label class="payment__form-label">Срок действия</label>
 								<div class="payment__form-select">
-									<select data-chosen>
+									<select data-chosen name="card[month]">
 									<option value="1">01</option>
 									<option value="2">02</option>
 									<option value="3">03</option>
@@ -91,7 +91,7 @@
 								</select>
 								</div>
 								<div class="payment__form-select">
-									<select data-chosen>
+									<select data-chosen name="card[year]">
 									<option value="2016">2016</option>
 									<option value="2017">2017</option>
 									<option value="2018">2018</option>
@@ -101,19 +101,19 @@
 								</div>
 							</div>
 							<div class="payment__card-name">
-								<input type="text" class="payment__form-input _all-width" placeholder="Держатель карты">
+								<input type="text" class="payment__form-input _all-width" placeholder="Держатель карты" name="card[name]">
 							</div>
 						</div>
 						<div class="payment__card _back">
 							<div class="payment__card-code">
-								<label class="payment__form-label">Код CVV2 / CVC2</label>
+								<label class="payment__form-label" for="code">Код CVV2 / CVC2</label>
 								<div class="payment__card-code-inner">
-									<input type="text" class="payment__form-input _all-width">
+									<input type="password" class="payment__form-input _all-width" name="card[code]" id="code">
 									<button type="button" class="payment__form-question"></button>
 								</div>
 							</div>
 						</div>
-						<button class="b-btn">Оплатить</button>
+						<button class="b-btn" data-form-submit>Оплатить</button>
 					</form>
 				</div>
 			</section>
