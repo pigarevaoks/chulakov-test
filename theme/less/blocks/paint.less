@@ -1,0 +1,29 @@
+.paint{
+	width: 900px;
+	margin: 0 auto;
+	padding: 90px 0;
+	.clearfix;
+	&__nav{
+		width: 250px;
+		float: left;
+		background: white;
+		margin-left: 50px;
+		padding: 20px 25px;
+		&-item{
+			margin-bottom: 15px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+		&-btn{
+			width: 100%;
+		}
+	}
+	&__content{
+		float: left;
+		canvas{
+			display: block;
+			background: white;
+		}
+	}
+}
